@@ -1,3 +1,1 @@
-# Hate Crime in the US
-
 Currently a work in progress...
