@@ -24,7 +24,7 @@ h4 {
     }
 
 #header {
-	background: rgba(2, 2, 2, 0.7);
+	background: rgba(0, 0, 0, 0.7);
 	position: absolute;
 	width: 100%;
 	height: 55px;
@@ -87,21 +87,19 @@ h4 {
 
 #about {
     padding-top: 57px;
-    height: 265px;
+    height: 235px;
 	z-index: 7;
 	background: rgb(51,51,51);
 	background: rgba(51,51,51, 0.7); 
 }
 #about h1 {
-	font-family: 'Helvetica Neue';
-	font-size: 20px;
-	font-weight: 200;
+    font: 200 17px/18px 'Helvetica Neue';
 	padding: 20px;
 	padding-bottom: 50px;
+	color: #eee;
 }
 #about h1 span {
-    color: #eee;
-	font-weight: 400;
+	font-weight: 500;
 }
 #about h1 ital {
 	font-style: italic;
@@ -111,7 +109,7 @@ h4 {
 }
 
 #agency-header {
-	background: rgba(2, 2, 2, 0.7);
+	background: rgba(0, 0, 0, 0.8);
 	width: 486px;
 	height: 55px;
 	z-index: 7;
@@ -130,7 +128,7 @@ h4 {
 
 #agency-navigation {
     position: absolute;
-    top: 324px;
+    top: 294px;
     right: 0;
     }
 #agency-navigation li {
@@ -151,13 +149,13 @@ h4 {
     }
 
 #agency-navigation li a {
-	background: #0f0;
+	background: #000;
     }
 #agency-navigation li a:hover {
-    background: #fff;
+    background: #444;
     }
 #agency-navigation li a.active {
-	background: #f00;
+	background: #444;
     }
 #agency-navigation li a.active:hover {
     background: #000;
@@ -169,7 +167,7 @@ h4 {
 	padding-right: 15px;
 	padding-left: 15px;
 	position: absolute;
-	top: 375px;
+	top: 345px;
     }
 #tooltip h2,h3,h4 {
 	font-family: 'Helvetica Neue';
@@ -178,7 +176,7 @@ h4 {
 #tooltip h2 {
     font-weight: 500;
 	font-size: 35px;
-	color: #ccc;
+	color: #eee;
 	}
 #tooltip h3 {
 	font-weight: 400;
@@ -190,6 +188,16 @@ h4 {
 	font-size: 60px;
 	color: #eee;
     }
+#tooltip h5 {
+    color: #ccc;
+    font-size: 20px;
+    font-weight: 400;
+}
+#tooltip h5 span {
+    color: #eee;
+    font-weight: 500;
+}
+
 
 #tooltip table {
     width: 100%;
@@ -202,15 +210,15 @@ h4 {
   }
 #tooltip table th {
   color: #eee;
-  font-size: 18px;
-  font-weight:225;
+  font: 225 16px/18px;
   vertical-align: middle;
+  border-bottom: 1px solid #333;
   }
 #tooltip table td {
   vertical-align: top;
-  border-top: 1px solid #333;
-  font-size: 16px;
-  color: #bbb;
+  border-bottom: 1px solid #333;
+  font: 200 16px/18px;
+  color: #ccc;
   }
 
 .wax-tooltip {
@@ -310,16 +318,12 @@ h4 {
     position: absolute;
     left:10px;
     bottom:10px;
-    font-family: 'Helvetica Neue';
-    font-size: 75%;
-    font-weight: 200;
+    font: 200 75% 'Helvetica Neue';
     color: #eee;
     }
 #attribution a {
 	color: #aaa;
     }
-    
-/* LEGEND */
 
 .wax-legend {
 	position: absolute;
@@ -345,9 +349,8 @@ h4 {
 .wax-legend .legend-title {
 	text-align: left;
 	margin-top: 4px;
-	margin-bottom: 8px;
-	font-size: 18px;
-	font-weight: 200;
+	margin-bottom: 10px;
+    font: 200 18px/20px;
 	color: #eee;
 }
 .wax-legend .scale ul {
@@ -360,7 +363,7 @@ h4 {
 	display: block;
 	float: left;
 	width: 60px;
-	margin-bottom: 6px;
+	margin-bottom: 8px;
 	text-align: center;
 	font-size: 80%;
 	color: #eee;
