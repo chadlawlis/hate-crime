@@ -27,10 +27,9 @@ function buildMap(layers) {
         }
         wax.mm.zoomer(m, tilejson).appendTo($('#controls')[0]);
         wax.mm.legend(m, tilejson).appendTo(m.parent);
+        map.setZoomRange(3, 9);
       }
     );
-    
-    // map.setZoomRange(3, 9);
 }
 
 $(function () {
