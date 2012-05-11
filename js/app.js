@@ -12,12 +12,20 @@ var layers = [
 function buildMap(layers) {
     var url = 'http://api.tiles.mapbox.com/v3/' + layers + '.jsonp';
     wax.tilejson(url, function(tilejson) {
-        var m = new MM.Map('map', new wax.mm.connector(tilejson));
-        console.log(m.coordinate);
-        wax.mm.interaction()
-          .map(m)
-          .tilejson(tilejson)
-          .on(wax.tooltip().animate(false).parent($('#tooltip')[0]).events());
+        if (!m) {
+            m = new MM.Map('map', new wax.mm.connector(tilejson));
+        } else {
+            m.setLayerAt(0, new wax.mm.connector(tilejson));
+        }
+        if (!interaction) {
+          // create interaction for the first time
+          interaction = wax.mm.interaction()
+            .map(m)
+            .tilejson(tilejson)
+            .on(wax.tooltip().animate(false).parent($('#tooltip')[0]).events());
+        } else {
+          interaction.tilejson(tilejson);
+        }
 
         if(!isSet) {
             m.setCenterZoom({ lat: 38, lon: -76 }, 4);
