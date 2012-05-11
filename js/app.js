@@ -1,7 +1,7 @@
 var m, interaction, mm = com.modestmaps;
 var baseLayer = 'mapbox.world-black';
-var activeLayer = 'chadlawlis.hate-10-testing';
-var agencyLayer = 'chadlawlis.hate-dot-10-testing';
+var activeLayer = 'chadlawlis.hate-10';
+var agencyLayer = 'chadlawlis.hate-dot-10';
 var isSet = false;
 var layers = [
         baseLayer,
@@ -50,7 +50,7 @@ $(function () {
         if (!$(this).hasClass('active')) {
             var activeLayer = $(this).attr('data-layer');
             var activeYear = $(this).attr('data-year');
-            var agencyLayer = 'chadlawlis.hate-dot-' + activeYear + '-testing';
+            var agencyLayer = 'chadlawlis.hate-dot-' + activeYear;
 
             $('ul.layers li a').removeClass('active');
             $(this).addClass('active');
