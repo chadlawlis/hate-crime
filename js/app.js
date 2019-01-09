@@ -10,7 +10,7 @@ var layers = [
     ];
 
 function buildMap(layers) {
-    var url = 'http://api.tiles.mapbox.com/v3/' + layers + '.jsonp';
+    var url = 'https://api.tiles.mapbox.com/v3/' + layers + '.jsonp';
     wax.tilejson(url, function(tilejson) {
         if (!m) {
             m = new MM.Map('map', new wax.mm.connector(tilejson));
